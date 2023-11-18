@@ -21,6 +21,9 @@ class Ui_Form(object):
         self.frame.setGeometry(QtCore.QRect(0, 0, 771, 171))
         self.frame.setMinimumSize(QtCore.QSize(771, 171))
         self.frame.setMaximumSize(QtCore.QSize(771, 171))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.frame.setFont(font)
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -75,8 +78,16 @@ class Ui_Form(object):
         self.label_4.setObjectName("label_4")
         self.textEdit = QtWidgets.QTextEdit(self.frame)
         self.textEdit.setGeometry(QtCore.QRect(150, 70, 611, 31))
+        self.textEdit.setMinimumSize(QtCore.QSize(611, 31))
+        self.textEdit.setMaximumSize(QtCore.QSize(611, 31))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(15)
+        self.textEdit.setFont(font)
+        self.textEdit.setInputMethodHints(QtCore.Qt.ImhNone)
         self.textEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.textEdit.setLineWrapMode(QtWidgets.QTextEdit.NoWrap)
         self.textEdit.setObjectName("textEdit")
 
         self.retranslateUi(Form)
@@ -85,7 +96,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "PROGRAM TRACKER"))
+        self.label.setText(_translate("Form", "PROCESS MANAGER"))
         self.label_2.setText(_translate("Form", "PROGRAM PATH"))
         self.label_3.setText(_translate("Form", "STATUS"))
 
